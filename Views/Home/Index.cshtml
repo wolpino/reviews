@@ -1,0 +1,31 @@
+﻿@using reviews.Models
+@model reviews.Models.Review
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<p>Review Form</p>
+
+<form asp-controller="Home" asp-action="AddReview" method="POST">
+    <span asp-validation-for="reviewer"></span>
+    <label asp-for="reviewer"></label>
+    <input asp-for="reviewer"/>
+    <span asp-validation-for="restaurant"></span>
+    <label asp-for="restaurant"></label>
+    <input asp-for="restaurant"/>
+    <span asp-validation-for="reviewtext"></span>
+    <label asp-for="reviewtext"></label>
+    <input asp-for="reviewtext"/>
+    <span asp-validation-for="dateofvisit"></span> 
+    <label asp-for="dateofvisit"></label>
+    <input asp-for="dateofvisit"/>
+    <span asp-validation-for="stars"></span>
+    <label asp-for="stars"></label>
+    <select asp-for="stars">
+        <option value=1>1</option>
+        <option valye=2>2</option>
+        <option valye=3>3</option>
+        <option valye=4>4</option>      
+    </select>  
+    <input class="line" type="submit" value="Add Review" />
+</form>

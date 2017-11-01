@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+
+@foreach(var review in @ViewBag.allreviews)
+{
+<h4>Review for @review.restaurant --  @review.stars stars</h4>
+<h5>Reviewer: @review.reviewer, @review.dateofvisit</h5>
+<p>@review.reviewtext</p>
+<p><a href="remove/@review.reviewid">Remove</a></p>
+<hr>
+}
